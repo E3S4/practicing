@@ -8,6 +8,6 @@ int main() {
 
     printf("%p\n", p);
     printf("%d\n", *p);
-
+   free(p);
     return 0;
 }
