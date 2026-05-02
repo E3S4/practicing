@@ -1,13 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int *p = malloc(sizeof(int));
+int x = 10;
+  int *p = &x;
+printf("%i\n", x);
+*p = 99;
+printf("%i\n", x);
 
-    *p = 42;
-
-    printf("%p\n", p);
-    printf("%d\n", *p);
-   free(p);
-    return 0;
+return 0;
 }
