@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-int x;
-int *p= &x;
-  *p = 10; // garbage now not after adding that int *p = & stuff ; 
-// it will probably throw seg fault
-    printf("%p\n", p);   // address of x
-    printf("%d\n", *p);  
+    int *p = malloc(sizeof(int));
+
+    *p = 42;
+
+    printf("%p\n", p);
+    printf("%d\n", *p);
 
     return 0;
 }
